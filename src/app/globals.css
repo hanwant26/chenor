@@ -1,0 +1,121 @@
+
+@import "tailwindcss";
+
+/* ========================================
+   CHENOR — Global Styles
+======================================== */
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #ffffff;
+  color: #111111;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: #bfdbfe;
+  color: #111111;
+}
+
+/* ========================================
+   Accessibility
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* ========================================
+   CHENOR — Premium Motion System
+======================================== */
+
+@keyframes chenorFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes chenorFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+/* Hero entrance animation */
+
+.chenor-fade-up {
+  animation: chenorFadeUp 0.8s ease-out both;
+}
+
+/* Animation delays */
+
+.chenor-delay-1 {
+  animation-delay: 0.12s;
+}
+
+.chenor-delay-2 {
+  animation-delay: 0.24s;
+}
+
+.chenor-delay-3 {
+  animation-delay: 0.36s;
+}
+
+/* Floating CHENOR visual */
+
+.chenor-float {
+  animation: chenorFloat 6s ease-in-out infinite;
+}
+
+/* ========================================
+   CHENOR — Scroll Reveal
+======================================== */
+
+/*
+   Content remains visible by default.
+   This prevents sections from disappearing
+   when JavaScript is disabled.
+*/
+
+.chenor-reveal {
+  opacity: 1;
+  transform: none;
+}
+
+/* ========================================
+   Reduced Motion Support
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .chenor-fade-up,
+  .chenor-float {
+    animation: none;
+  }
+
+  .chenor-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
