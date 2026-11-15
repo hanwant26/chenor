@@ -13,31 +13,42 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const siteUrl = "https://chenor.vercel.app";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
+
   title: {
     default: "CHENOR | Digital Development Studio",
     template: "%s | CHENOR",
   },
+
   description:
-    "CHENOR is an independent digital development studio creating modern websites, web applications, and Python-powered solutions. Rooted in Strength. Driven by Innovation.",
+    "CHENOR is an independent digital development studio building modern websites, web applications, and Python-powered solutions.",
+
   applicationName: "CHENOR",
-  keywords: [
-    "CHENOR",
-    "Web Development",
-    "Next.js",
-    "Python",
-    "Django",
-    "Web Applications",
-    "Digital Development Studio",
-  ],
+
+  alternates: {
+    canonical: "/",
+  },
+
   openGraph: {
     title: "CHENOR | Digital Development Studio",
     description:
-      "Thoughtfully designed digital experiences. Rooted in Strength. Driven by Innovation.",
+      "Technology, thoughtfully built. Rooted in Strength. Driven by Innovation.",
+    url: siteUrl,
     siteName: "CHENOR",
-    type: "website",
     locale: "en_IN",
+    type: "website",
   },
+
+  twitter: {
+    card: "summary",
+    title: "CHENOR | Digital Development Studio",
+    description:
+      "Thoughtfully designed digital experiences.",
+  },
+
   robots: {
     index: true,
     follow: true,

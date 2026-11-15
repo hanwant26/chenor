@@ -7,5 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
+    sitemap: "https://chenor.vercel.app/sitemap.xml",
   };
 }
