@@ -24,9 +24,19 @@ export const metadata: Metadata = {
   },
 
   description:
-    "CHENOR is an independent digital development studio building modern websites, web applications, and Python-powered solutions.",
+    "CHENOR is an independent digital development studio creating modern websites, web applications, and Python-powered solutions.",
 
   applicationName: "CHENOR",
+
+  keywords: [
+    "CHENOR",
+    "Web Development",
+    "Next.js",
+    "Python",
+    "Django",
+    "Web Applications",
+    "Digital Development Studio",
+  ],
 
   alternates: {
     canonical: "/",
@@ -40,13 +50,22 @@ export const metadata: Metadata = {
     siteName: "CHENOR",
     locale: "en_IN",
     type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "CHENOR — Technology, thoughtfully built.",
+      },
+    ],
   },
 
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "CHENOR | Digital Development Studio",
     description:
-      "Thoughtfully designed digital experiences.",
+      "Technology, thoughtfully built.",
+    images: ["/og-image.png"],
   },
 
   robots: {
